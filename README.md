@@ -2,6 +2,8 @@
 
 This is a POC of a segfault in vite 8.
 
+Original discovery: [COPR: cyqsimon/ntfysh](https://copr.fedorainfracloud.org/coprs/cyqsimon/ntfysh/build/10649601/)
+
 You need a Fedora 44 (tested x86_64 and aarch64) system with internet access.
 
 ## Steps to reproduce
