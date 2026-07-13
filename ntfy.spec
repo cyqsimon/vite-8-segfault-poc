@@ -20,5 +20,9 @@ NTFY build segfault demo.
 # allow core dump
 ulimit -c unlimited
 
+pushd web
+npm install --save-dev vite@7 @vitejs/plugin-react@5
+popd
+
 # this eventually calls `vite build`
 make web
