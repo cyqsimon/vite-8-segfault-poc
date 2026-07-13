@@ -6,6 +6,8 @@ Original discovery: [COPR: cyqsimon/ntfysh](https://copr.fedorainfracloud.org/co
 
 You need a Fedora 44 (tested x86_64 and aarch64) system with internet access.
 
+Check out various branches to test different variations.
+
 ## Steps to reproduce
 
 1. Install build tools: `sudo dnf install -y spectool fedpkg`

@@ -20,14 +20,5 @@ NTFY build segfault demo.
 # allow core dump
 ulimit -c unlimited
 
-pushd web
-# ntfy-2.25.0 uses vite-8.0 as shipped, which has the same symptoms
-# this is just to demonstrate that the problem exists on latest stable too
-npm install --save-dev vite@8.1.4
-
-# no segfault if downgraded to vite-7
-#npm install --save-dev vite@7 @vitejs/plugin-react@5
-popd
-
 # this eventually calls `vite build`
 make web
