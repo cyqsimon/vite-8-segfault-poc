@@ -7,6 +7,7 @@ Summary: NTFY build segfault demo
 License: ASL 2.0 AND GPLv2
 Source0: https://github.com/binwiederhier/ntfy/archive/v%{version}.tar.gz
 Source1: https://github.com/rolldown/rolldown/archive/v1.1.2.tar.gz
+Patch0: mimalloc-v2.patch
 
 # using nodejs22-npm shows identical symptoms
 BuildRequires: cargo cmake curl gcc-c++ git just make nodejs24-npm
@@ -16,6 +17,9 @@ NTFY build segfault demo.
 
 %prep
 %setup -DTq -b0 -b1
+
+cd ../rolldown-*
+%patch -P0 -p1
 
 %build
 cd ..

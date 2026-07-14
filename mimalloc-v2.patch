@@ -1,0 +1,24 @@
+diff --git a/crates/rolldown_binding/Cargo.toml b/crates/rolldown_binding/Cargo.toml
+index cf85d1e63..9f3630901 100644
+--- a/crates/rolldown_binding/Cargo.toml
++++ b/crates/rolldown_binding/Cargo.toml
+@@ -75,17 +75,16 @@ tracing = { workspace = true }
+ url = { workspace = true }
+ 
+ [target.'cfg(all(not(target_os = "linux"), not(target_os = "freebsd"), not(target_family = "wasm")))'.dependencies]
+-mimalloc-safe = { workspace = true, features = ["skip_collect_on_exit", "v3"] }
++mimalloc-safe = { workspace = true, features = ["skip_collect_on_exit"] }
+ 
+ [target.'cfg(all(any(target_os = "linux", target_os = "freebsd"), not(target_arch = "aarch64"), not(target_env = "ohos")))'.dependencies]
+-mimalloc-safe = { workspace = true, features = ["skip_collect_on_exit", "local_dynamic_tls", "v3"] }
++mimalloc-safe = { workspace = true, features = ["skip_collect_on_exit", "local_dynamic_tls"] }
+ 
+ [target.'cfg(all(target_os = "linux", target_arch = "aarch64"))'.dependencies]
+ mimalloc-safe = { workspace = true, features = [
+   "skip_collect_on_exit",
+   "no_opt_arch",
+   "local_dynamic_tls",
+-  "v3",
+ ] }
+ 
+ [build-dependencies]
