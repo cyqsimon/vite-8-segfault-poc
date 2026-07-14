@@ -1,0 +1,13 @@
+diff --git a/justfile b/justfile
+index ab1075652..bbbe365d6 100644
+--- a/justfile
++++ b/justfile
+@@ -184,7 +184,7 @@ build-glue:
+ 
+ # Only build `.node` binding located in `packages/rolldown`.
+ build-rolldown-binding:
+-  vp run --filter rolldown build-binding
++  vp run --filter rolldown build-binding --features default_global_allocator
+ 
+ # Build `rolldown` located in `packages/rolldown` itself and its `.node` binding.
+ build-rolldown:
