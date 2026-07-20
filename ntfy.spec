@@ -1,11 +1,12 @@
 %global debug_package %{nil}
 
 Name: ntfy
-Version: 2.25.0
+Version: {{{ git_dir_version }}}
 Release: 1%{?dist}
 Summary: NTFY build segfault demo
 License: ASL 2.0 AND GPLv2
-Source0: https://github.com/binwiederhier/ntfy/archive/v%{version}.tar.gz
+VCS: {{{ git_dir_vcs }}}
+Source0: {{{ git_dir_pack }}}
 
 # using nodejs22-npm shows identical symptoms
 BuildRequires: make nodejs24-npm
@@ -14,7 +15,7 @@ BuildRequires: make nodejs24-npm
 NTFY build segfault demo.
 
 %prep
-%autosetup
+{{{ git_dir_setup_macro }}}
 
 %build
 # allow core dump
