@@ -10,9 +10,9 @@ Check out various branches to test different variations.
 
 ## Steps to reproduce
 
-1. Install build tools: `sudo dnf install -y spectool fedpkg`
-2. Fetch build source: `spectool --get-files ntfy.spec`
-3. Build: `fedpkg --release f44 srpm && fedpkg --release f44 mockbuild --enable-network`
+1. Install build tools: `sudo dnf install -y rpkg fedpkg`
+2. Prepare source RPM: `rpkg srpm --outdir .`
+3. Build: `fedpkg --release f44 mockbuild --enable-network`
 4. Wait and observe the segfault (exit status 139)
 
 ## Obtaining a core dump
