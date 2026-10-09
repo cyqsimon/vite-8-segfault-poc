@@ -5,7 +5,7 @@ web: web-deps web-build
 
 .PHONY: web-build
 web-build:
-	cd web && $(NPM) run build
+	cd web && ./build.mjs
 
 .PHONY: web-deps
 web-deps:
